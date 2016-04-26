@@ -1,0 +1,40 @@
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll.config
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.pdb
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.dll
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.xml
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.dll
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.pdb
+C:\Users\Durali\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll.config
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.pdb
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\Dal.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll.config
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\Dal.dll
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\Dal.pdb
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.dll
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.xml
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\obj\Debug\Dal.dll
+C:\Users\Durali\Desktop\asd\AsistanTakipSistemi\Dal\obj\Debug\Dal.pdb

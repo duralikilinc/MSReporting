@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AsistanTakipModelStoreContainer" CdmEntityContainer="AsistanTakipEntities">
+    <EntitySetMapping Name="AnabilimDali">
+      <EntityTypeMapping TypeName="AsistanTakipModel.AnabilimDali">
+        <MappingFragment StoreEntitySet="AnabilimDali">
+          <ScalarProperty Name="AnadalId" ColumnName="AnadalId" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="Sure_yil" ColumnName="Sure_yil" />
+          <ScalarProperty Name="Sure_gun" ColumnName="Sure_gun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asistan">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Asistan">
+        <MappingFragment StoreEntitySet="Asistan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="AnabilimDali" ColumnName="AnabilimDali" />
+          <ScalarProperty Name="BaslangicTarih" ColumnName="BaslangicTarih" />
+          <ScalarProperty Name="BitisTarih" ColumnName="BitisTarih" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezBitisTarih" ColumnName="TezBitisTarih" />
+          <ScalarProperty Name="TezDanismaHocası" ColumnName="TezDanismaHocası" />
+          <ScalarProperty Name="BabaAdi" ColumnName="BabaAdi" />
+          <ScalarProperty Name="AnaAdi" ColumnName="AnaAdi" />
+          <ScalarProperty Name="Dogumyeri" ColumnName="Dogumyeri" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="AyrilisTarihi" ColumnName="AyrilisTarihi" />
+          <ScalarProperty Name="GittigiYer" ColumnName="GittigiYer" />
+          <ScalarProperty Name="MezuniyetDurumu" ColumnName="MezuniyetDurumu" />
+          <ScalarProperty Name="MezuniyetTarihi" ColumnName="MezuniyetTarihi" />
+          <ScalarProperty Name="MezunOlFakulte" ColumnName="MezunOlFakulte" />
+          <ScalarProperty Name="AskerlikSube" ColumnName="AskerlikSube" />
+          <ScalarProperty Name="SevkTehirTarihi" ColumnName="SevkTehirTarihi" />
+          <ScalarProperty Name="SonSevkThrTarihi" ColumnName="SonSevkThrTarihi" />
+          <ScalarProperty Name="TUSDonemi" ColumnName="TUSDonemi" />
+          <ScalarProperty Name="TusNotu" ColumnName="TusNotu" />
+          <ScalarProperty Name="TescilNo" ColumnName="TescilNo" />
+          <ScalarProperty Name="DiplomaNo" ColumnName="DiplomaNo" />
+          <ScalarProperty Name="KayitTuru" ColumnName="KayitTuru" />
+          <ScalarProperty Name="YabanciDilPuan" ColumnName="YabanciDilPuan" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="Sure_gun" ColumnName="Sure_gun" />
+          <ScalarProperty Name="TezKabul" ColumnName="TezKabul" />
+          <ScalarProperty Name="Egitim_yili" ColumnName="Egitim_yili" />
+          <ScalarProperty Name="Sure_yil" ColumnName="Sure_yil" />
+          <ScalarProperty Name="UyariOnay" ColumnName="UyariOnay" />
+          <ScalarProperty Name="SinavUyari" ColumnName="SinavUyari" />
+          <ScalarProperty Name="TezRaporUyari" ColumnName="TezRaporUyari" />
+          <ScalarProperty Name="OgrDegUyari" ColumnName="OgrDegUyari" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Baskan">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Baskan">
+        <MappingFragment StoreEntitySet="Baskan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="AnabilimId" ColumnName="AnabilimId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ek2_Raporu">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Ek2_Raporu">
+        <MappingFragment StoreEntitySet="Ek2_Raporu">
+          <ScalarProperty Name="RaporId" ColumnName="RaporId" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="RaporNo1" ColumnName="RaporNo1" />
+          <ScalarProperty Name="But_GerekliDegil" ColumnName="But_GerekliDegil" />
+          <ScalarProperty Name="But_SDU_BAP_Koor_Bir" ColumnName="But_SDU_BAP_Koor_Bir" />
+          <ScalarProperty Name="But_TÜBİTAK" ColumnName="But_TÜBİTAK" />
+          <ScalarProperty Name="But_Uzmanlık_Ogr" ColumnName="But_Uzmanlık_Ogr" />
+          <ScalarProperty Name="But_Diger" ColumnName="But_Diger" />
+          <ScalarProperty Name="Tez_Cal_Bas" ColumnName="Tez_Cal_Bas" />
+          <ScalarProperty Name="Tez_Cal_Bas_Planlama" ColumnName="Tez_Cal_Bas_Planlama" />
+          <ScalarProperty Name="Tez_Cal_Bas_Yurutme" ColumnName="Tez_Cal_Bas_Yurutme" />
+          <ScalarProperty Name="Tez_Cal_Bas_Tamamladı" ColumnName="Tez_Cal_Bas_Tamamladı" />
+          <ScalarProperty Name="Mlzme_GereliDegil" ColumnName="Mlzme_GereliDegil" />
+          <ScalarProperty Name="Mlzme_Baslanmadi" ColumnName="Mlzme_Baslanmadi" />
+          <ScalarProperty Name="Mlzme_DevamEdiyo" ColumnName="Mlzme_DevamEdiyo" />
+          <ScalarProperty Name="Mlzme_Tamamlandi" ColumnName="Mlzme_Tamamlandi" />
+          <ScalarProperty Name="Veri_Baslanmadi" ColumnName="Veri_Baslanmadi" />
+          <ScalarProperty Name="Veri_DevamEdiyo" ColumnName="Veri_DevamEdiyo" />
+          <ScalarProperty Name="Veri_Tamamlandi" ColumnName="Veri_Tamamlandi" />
+          <ScalarProperty Name="Lab_GerekliDegil" ColumnName="Lab_GerekliDegil" />
+          <ScalarProperty Name="Lab_Baslanmadi" ColumnName="Lab_Baslanmadi" />
+          <ScalarProperty Name="Lab_DevamEdiyo" ColumnName="Lab_DevamEdiyo" />
+          <ScalarProperty Name="Lab_Tamamlandi" ColumnName="Lab_Tamamlandi" />
+          <ScalarProperty Name="Analiz_Baslanmadi" ColumnName="Analiz_Baslanmadi" />
+          <ScalarProperty Name="Analiz_DevamEdiyo" ColumnName="Analiz_DevamEdiyo" />
+          <ScalarProperty Name="Analiz_Tamamlandi" ColumnName="Analiz_Tamamlandi" />
+          <ScalarProperty Name="Tez_Yaz_Baslandi" ColumnName="Tez_Yaz_Baslandi" />
+          <ScalarProperty Name="Tez_Yaz_DevamEdiyo" ColumnName="Tez_Yaz_DevamEdiyo" />
+          <ScalarProperty Name="Tez_Yaz_Tamamlandi" ColumnName="Tez_Yaz_Tamamlandi" />
+          <ScalarProperty Name="Yrm_TzSure_Bitecek" ColumnName="Yrm_TzSure_Bitecek" />
+          <ScalarProperty Name="Yrm_EkSureGerekli" ColumnName="Yrm_EkSureGerekli" />
+          <ScalarProperty Name="Yrm_Tezde_Amac" ColumnName="Yrm_Tezde_Amac" />
+          <ScalarProperty Name="Yrm_Yeni_TezKonusu" ColumnName="Yrm_Yeni_TezKonusu" />
+          <ScalarProperty Name="RaporOlusturmaTarh" ColumnName="RaporOlusturmaTarh" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ek3_Raporu">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Ek3_Raporu">
+        <MappingFragment StoreEntitySet="Ek3_Raporu">
+          <ScalarProperty Name="RaporId" ColumnName="RaporId" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="BaskanId" ColumnName="BaskanId" />
+          <ScalarProperty Name="TezSavunmaTarihi" ColumnName="TezSavunmaTarihi" />
+          <ScalarProperty Name="TezYeri" ColumnName="TezYeri" />
+          <ScalarProperty Name="RaporOlusturmaTarh" ColumnName="RaporOlusturmaTarh" />
+          <ScalarProperty Name="Juri1ID" ColumnName="Juri1ID" />
+          <ScalarProperty Name="Juri2ID" ColumnName="Juri2ID" />
+          <ScalarProperty Name="Juri3ID" ColumnName="Juri3ID" />
+          <ScalarProperty Name="YJuri1ID" ColumnName="YJuri1ID" />
+          <ScalarProperty Name="YJuri2ID" ColumnName="YJuri2ID" />
+          <ScalarProperty Name="GorevJuri1" ColumnName="GorevJuri1" />
+          <ScalarProperty Name="GorevJuri2" ColumnName="GorevJuri2" />
+          <ScalarProperty Name="GorevJuri3" ColumnName="GorevJuri3" />
+          <ScalarProperty Name="GorevYJuri1" ColumnName="GorevYJuri1" />
+          <ScalarProperty Name="GorevYJuri2" ColumnName="GorevYJuri2" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Juriler">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Juriler">
+        <MappingFragment StoreEntitySet="Juriler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCNo" ColumnName="TCNo" />
+          <ScalarProperty Name="Ad_Soyad" ColumnName="Ad_Soyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="UzmanlıkID" ColumnName="UzmanlıkID" />
+          <ScalarProperty Name="Grv_Uni" ColumnName="Grv_Uni" />
+          <ScalarProperty Name="Fakultesi" ColumnName="Fakultesi" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kanaat_Rapor">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Kanaat_Rapor">
+        <MappingFragment StoreEntitySet="Kanaat_Rapor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="donem" ColumnName="donem" />
+          <ScalarProperty Name="BaglliKurum" ColumnName="BaglliKurum" />
+          <ScalarProperty Name="Gorev_MesaiSaat" ColumnName="Gorev_MesaiSaat" />
+          <ScalarProperty Name="Gorev_Sorumluluk" ColumnName="Gorev_Sorumluluk" />
+          <ScalarProperty Name="Gorev_Yurutme" ColumnName="Gorev_Yurutme" />
+          <ScalarProperty Name="Gorev_Sonuc" ColumnName="Gorev_Sonuc" />
+          <ScalarProperty Name="Gorev_Ortalama" ColumnName="Gorev_Ortalama" />
+          <ScalarProperty Name="Calisma_Yetenek" ColumnName="Calisma_Yetenek" />
+          <ScalarProperty Name="Calisma_Bilimsellik" ColumnName="Calisma_Bilimsellik" />
+          <ScalarProperty Name="Calisma_Ekip" ColumnName="Calisma_Ekip" />
+          <ScalarProperty Name="Calisma_Ortalama" ColumnName="Calisma_Ortalama" />
+          <ScalarProperty Name="Arastirma_İstek" ColumnName="Arastirma_İstek" />
+          <ScalarProperty Name="Arastirma_Sonuclandirma" ColumnName="Arastirma_Sonuclandirma" />
+          <ScalarProperty Name="Arastirma_BilgiKaynak" ColumnName="Arastirma_BilgiKaynak" />
+          <ScalarProperty Name="Arastirma_YayinYapma" ColumnName="Arastirma_YayinYapma" />
+          <ScalarProperty Name="Arastirma_Ortalama" ColumnName="Arastirma_Ortalama" />
+          <ScalarProperty Name="Yonetme_ProbAnaliz" ColumnName="Yonetme_ProbAnaliz" />
+          <ScalarProperty Name="Yonetme_Organizasyon" ColumnName="Yonetme_Organizasyon" />
+          <ScalarProperty Name="Yonetme_Iletisim" ColumnName="Yonetme_Iletisim" />
+          <ScalarProperty Name="Yonetme_Ortalama" ColumnName="Yonetme_Ortalama" />
+          <ScalarProperty Name="Meslek_İliski" ColumnName="Meslek_İliski" />
+          <ScalarProperty Name="Meslek_EgitimSorumlu" ColumnName="Meslek_EgitimSorumlu" />
+          <ScalarProperty Name="Meslek_DigerCalisanlar" ColumnName="Meslek_DigerCalisanlar" />
+          <ScalarProperty Name="Meslek_Hasta" ColumnName="Meslek_Hasta" />
+          <ScalarProperty Name="Meslek_Ortalama" ColumnName="Meslek_Ortalama" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KayitTuru">
+      <EntityTypeMapping TypeName="AsistanTakipModel.KayitTuru">
+        <MappingFragment StoreEntitySet="KayitTuru">
+          <ScalarProperty Name="KayitTuruNo" ColumnName="KayitTuruNo" />
+          <ScalarProperty Name="KayitTuru1" ColumnName="KayitTuru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TckNo" ColumnName="TckNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+          <ScalarProperty Name="AnabilimId" ColumnName="AnabilimId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiteraturBilgisi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.LiteraturBilgisi">
+        <MappingFragment StoreEntitySet="LiteraturBilgisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="OgrtUye" ColumnName="OgrtUye" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogFile">
+      <EntityTypeMapping TypeName="AsistanTakipModel.LogFile">
+        <MappingFragment StoreEntitySet="LogFile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="UserMac" ColumnName="UserMac" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="ErrorUrl" ColumnName="ErrorUrl" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ErrorStackTrace" ColumnName="ErrorStackTrace" />
+          <ScalarProperty Name="ErrorData" ColumnName="ErrorData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MezunSonrasiDersBilgileri">
+      <EntityTypeMapping TypeName="AsistanTakipModel.MezunSonrasiDersBilgileri">
+        <MappingFragment StoreEntitySet="MezunSonrasiDersBilgileri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="DersKonusu" ColumnName="DersKonusu" />
+          <ScalarProperty Name="OgretimUyesi" ColumnName="OgretimUyesi" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OgretimUyesi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.OgretimUyesi">
+        <MappingFragment StoreEntitySet="OgretimUyesi">
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="Anadali" ColumnName="Anadali" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="Cinsiyeti" ColumnName="Cinsiyeti" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RaporKarne">
+      <EntityTypeMapping TypeName="AsistanTakipModel.RaporKarne">
+        <MappingFragment StoreEntitySet="RaporKarne">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="RaporTarihi" ColumnName="RaporTarihi" />
+          <ScalarProperty Name="MS1" ColumnName="MS1" />
+          <ScalarProperty Name="MS2" ColumnName="MS2" />
+          <ScalarProperty Name="MS3" ColumnName="MS3" />
+          <ScalarProperty Name="MS4" ColumnName="MS4" />
+          <ScalarProperty Name="MS5" ColumnName="MS5" />
+          <ScalarProperty Name="MS6" ColumnName="MS6" />
+          <ScalarProperty Name="MS7" ColumnName="MS7" />
+          <ScalarProperty Name="MS8" ColumnName="MS8" />
+          <ScalarProperty Name="MS9" ColumnName="MS9" />
+          <ScalarProperty Name="MS10" ColumnName="MS10" />
+          <ScalarProperty Name="MS11" ColumnName="MS11" />
+          <ScalarProperty Name="MS12" ColumnName="MS12" />
+          <ScalarProperty Name="MS13" ColumnName="MS13" />
+          <ScalarProperty Name="MS14" ColumnName="MS14" />
+          <ScalarProperty Name="MS15" ColumnName="MS15" />
+          <ScalarProperty Name="MS16" ColumnName="MS16" />
+          <ScalarProperty Name="MS17" ColumnName="MS17" />
+          <ScalarProperty Name="MS18" ColumnName="MS18" />
+          <ScalarProperty Name="MS19" ColumnName="MS19" />
+          <ScalarProperty Name="MS20" ColumnName="MS20" />
+          <ScalarProperty Name="MS21" ColumnName="MS21" />
+          <ScalarProperty Name="MS22" ColumnName="MS22" />
+          <ScalarProperty Name="MS23" ColumnName="MS23" />
+          <ScalarProperty Name="MS24" ColumnName="MS24" />
+          <ScalarProperty Name="RotId" ColumnName="RotId" />
+          <ScalarProperty Name="RotBasId" ColumnName="RotBasId" />
+          <ScalarProperty Name="Sem1" ColumnName="Sem1" />
+          <ScalarProperty Name="Sem2" ColumnName="Sem2" />
+          <ScalarProperty Name="Sem3" ColumnName="Sem3" />
+          <ScalarProperty Name="Sem4" ColumnName="Sem4" />
+          <ScalarProperty Name="Sem5" ColumnName="Sem5" />
+          <ScalarProperty Name="Sem6" ColumnName="Sem6" />
+          <ScalarProperty Name="Sem7" ColumnName="Sem7" />
+          <ScalarProperty Name="Sem8" ColumnName="Sem8" />
+          <ScalarProperty Name="Sem9" ColumnName="Sem9" />
+          <ScalarProperty Name="Sem10" ColumnName="Sem10" />
+          <ScalarProperty Name="Sem11" ColumnName="Sem11" />
+          <ScalarProperty Name="Sem12" ColumnName="Sem12" />
+          <ScalarProperty Name="Lit1" ColumnName="Lit1" />
+          <ScalarProperty Name="Lit2" ColumnName="Lit2" />
+          <ScalarProperty Name="Lit3" ColumnName="Lit3" />
+          <ScalarProperty Name="Lit4" ColumnName="Lit4" />
+          <ScalarProperty Name="Lit5" ColumnName="Lit5" />
+          <ScalarProperty Name="Lit6" ColumnName="Lit6" />
+          <ScalarProperty Name="Lit7" ColumnName="Lit7" />
+          <ScalarProperty Name="Lit8" ColumnName="Lit8" />
+          <ScalarProperty Name="Lit9" ColumnName="Lit9" />
+          <ScalarProperty Name="Lit10" ColumnName="Lit10" />
+          <ScalarProperty Name="Lit11" ColumnName="Lit11" />
+          <ScalarProperty Name="Lit12" ColumnName="Lit12" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Sinav4" ColumnName="Sinav4" />
+          <ScalarProperty Name="Sinav5" ColumnName="Sinav5" />
+          <ScalarProperty Name="Sinav6" ColumnName="Sinav6" />
+          <ScalarProperty Name="Sinav7" ColumnName="Sinav7" />
+          <ScalarProperty Name="Sinav8" ColumnName="Sinav8" />
+          <ScalarProperty Name="Sinav9" ColumnName="Sinav9" />
+          <ScalarProperty Name="Sinav10" ColumnName="Sinav10" />
+          <ScalarProperty Name="Sinav11" ColumnName="Sinav11" />
+          <ScalarProperty Name="Sinav12" ColumnName="Sinav12" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rotasyon">
+      <EntityTypeMapping TypeName="AsistanTakipModel.Rotasyon">
+        <MappingFragment StoreEntitySet="Rotasyon">
+          <ScalarProperty Name="RotasyonId" ColumnName="RotasyonId" />
+          <ScalarProperty Name="RotBaslangicTarihi" ColumnName="RotBaslangicTarihi" />
+          <ScalarProperty Name="RotBitisTarihi" ColumnName="RotBitisTarihi" />
+          <ScalarProperty Name="RotasyonBilgiId" ColumnName="RotasyonBilgiId" />
+          <ScalarProperty Name="RotasyonEgitimDönemi" ColumnName="RotasyonEgitimDönemi" />
+          <ScalarProperty Name="Sure_ay" ColumnName="Sure_ay" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="UyariOnay" ColumnName="UyariOnay" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RotasyonBilgi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.RotasyonBilgi">
+        <MappingFragment StoreEntitySet="RotasyonBilgi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnabilimId" ColumnName="AnabilimId" />
+          <ScalarProperty Name="EgitimYili" ColumnName="EgitimYili" />
+          <ScalarProperty Name="UzmanlikId" ColumnName="UzmanlikId" />
+          <ScalarProperty Name="Sure_ay" ColumnName="Sure_ay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeminerBilgisi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.SeminerBilgisi">
+        <MappingFragment StoreEntitySet="SeminerBilgisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="OgrtmID" ColumnName="OgrtmID" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SinavBilgisi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.SinavBilgisi">
+        <MappingFragment StoreEntitySet="SinavBilgisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Puan" ColumnName="Puan" />
+          <ScalarProperty Name="OgrtUye" ColumnName="OgrtUye" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AsistanTakipModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UzmanlikAlani">
+      <EntityTypeMapping TypeName="AsistanTakipModel.UzmanlikAlani">
+        <MappingFragment StoreEntitySet="UzmanlikAlani">
+          <ScalarProperty Name="UzmanlikAlanId" ColumnName="UzmanlikAlanId" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AsistanRotasyon">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_AsistanRotasyon">
+        <MappingFragment StoreEntitySet="View_AsistanRotasyon">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="BaslangicTarih" ColumnName="BaslangicTarih" />
+          <ScalarProperty Name="BitisTarih" ColumnName="BitisTarih" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezBitisTarih" ColumnName="TezBitisTarih" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="MezunOlFakulte" ColumnName="MezunOlFakulte" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="RotBaslangicTarihi" ColumnName="RotBaslangicTarihi" />
+          <ScalarProperty Name="RotBitisTarihi" ColumnName="RotBitisTarihi" />
+          <ScalarProperty Name="UzmanlikAd" ColumnName="UzmanlikAd" />
+          <ScalarProperty Name="AsistanPasif" ColumnName="AsistanPasif" />
+          <ScalarProperty Name="RotasyonPasif" ColumnName="RotasyonPasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_KanaatForm">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_KanaatForm">
+        <MappingFragment StoreEntitySet="View_KanaatForm">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="BaslangicTarih" ColumnName="BaslangicTarih" />
+          <ScalarProperty Name="BitisTarih" ColumnName="BitisTarih" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="donem" ColumnName="donem" />
+          <ScalarProperty Name="BaglliKurum" ColumnName="BaglliKurum" />
+          <ScalarProperty Name="Gorev_MesaiSaat" ColumnName="Gorev_MesaiSaat" />
+          <ScalarProperty Name="Gorev_Sorumluluk" ColumnName="Gorev_Sorumluluk" />
+          <ScalarProperty Name="Gorev_Yurutme" ColumnName="Gorev_Yurutme" />
+          <ScalarProperty Name="Gorev_Sonuc" ColumnName="Gorev_Sonuc" />
+          <ScalarProperty Name="Gorev_Ortalama" ColumnName="Gorev_Ortalama" />
+          <ScalarProperty Name="Calisma_Yetenek" ColumnName="Calisma_Yetenek" />
+          <ScalarProperty Name="Calisma_Bilimsellik" ColumnName="Calisma_Bilimsellik" />
+          <ScalarProperty Name="Calisma_Ekip" ColumnName="Calisma_Ekip" />
+          <ScalarProperty Name="Calisma_Ortalama" ColumnName="Calisma_Ortalama" />
+          <ScalarProperty Name="Arastirma_İstek" ColumnName="Arastirma_İstek" />
+          <ScalarProperty Name="Arastirma_Sonuclandirma" ColumnName="Arastirma_Sonuclandirma" />
+          <ScalarProperty Name="Arastirma_BilgiKaynak" ColumnName="Arastirma_BilgiKaynak" />
+          <ScalarProperty Name="Arastirma_YayinYapma" ColumnName="Arastirma_YayinYapma" />
+          <ScalarProperty Name="Arastirma_Ortalama" ColumnName="Arastirma_Ortalama" />
+          <ScalarProperty Name="Yonetme_ProbAnaliz" ColumnName="Yonetme_ProbAnaliz" />
+          <ScalarProperty Name="Yonetme_Organizasyon" ColumnName="Yonetme_Organizasyon" />
+          <ScalarProperty Name="Yonetme_Iletisim" ColumnName="Yonetme_Iletisim" />
+          <ScalarProperty Name="Yonetme_Ortalama" ColumnName="Yonetme_Ortalama" />
+          <ScalarProperty Name="Meslek_İliski" ColumnName="Meslek_İliski" />
+          <ScalarProperty Name="Meslek_EgitimSorumlu" ColumnName="Meslek_EgitimSorumlu" />
+          <ScalarProperty Name="Meslek_DigerCalisanlar" ColumnName="Meslek_DigerCalisanlar" />
+          <ScalarProperty Name="Meslek_Hasta" ColumnName="Meslek_Hasta" />
+          <ScalarProperty Name="Meslek_Ortalama" ColumnName="Meslek_Ortalama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Lit">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Lit">
+        <MappingFragment StoreEntitySet="View_Lit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Mezun">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Mezun">
+        <MappingFragment StoreEntitySet="View_Mezun">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="DersKonusu" ColumnName="DersKonusu" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Personel_TotalAsistan">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Personel_TotalAsistan">
+        <MappingFragment StoreEntitySet="View_Personel_TotalAsistan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="BaslangicTarih" ColumnName="BaslangicTarih" />
+          <ScalarProperty Name="BitisTarih" ColumnName="BitisTarih" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezBitisTarih" ColumnName="TezBitisTarih" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="BabaAdi" ColumnName="BabaAdi" />
+          <ScalarProperty Name="AnaAdi" ColumnName="AnaAdi" />
+          <ScalarProperty Name="Dogumyeri" ColumnName="Dogumyeri" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="AyrilisTarihi" ColumnName="AyrilisTarihi" />
+          <ScalarProperty Name="GittigiYer" ColumnName="GittigiYer" />
+          <ScalarProperty Name="MezuniyetDurumu" ColumnName="MezuniyetDurumu" />
+          <ScalarProperty Name="MezuniyetTarihi" ColumnName="MezuniyetTarihi" />
+          <ScalarProperty Name="MezunOlFakulte" ColumnName="MezunOlFakulte" />
+          <ScalarProperty Name="AskerlikSube" ColumnName="AskerlikSube" />
+          <ScalarProperty Name="SevkTehirTarihi" ColumnName="SevkTehirTarihi" />
+          <ScalarProperty Name="SonSevkThrTarihi" ColumnName="SonSevkThrTarihi" />
+          <ScalarProperty Name="TUSDonemi" ColumnName="TUSDonemi" />
+          <ScalarProperty Name="TusNotu" ColumnName="TusNotu" />
+          <ScalarProperty Name="TescilNo" ColumnName="TescilNo" />
+          <ScalarProperty Name="DiplomaNo" ColumnName="DiplomaNo" />
+          <ScalarProperty Name="KayitTuru" ColumnName="KayitTuru" />
+          <ScalarProperty Name="YabanciDilPuan" ColumnName="YabanciDilPuan" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="Sure_gun" ColumnName="Sure_gun" />
+          <ScalarProperty Name="TezKabul" ColumnName="TezKabul" />
+          <ScalarProperty Name="Egitim_yili" ColumnName="Egitim_yili" />
+          <ScalarProperty Name="Sure_yil" ColumnName="Sure_yil" />
+          <ScalarProperty Name="Pasif" ColumnName="Pasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_RaporKarne">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_RaporKarne">
+        <MappingFragment StoreEntitySet="View_RaporKarne">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="BaslangicTarih" ColumnName="BaslangicTarih" />
+          <ScalarProperty Name="BitisTarih" ColumnName="BitisTarih" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezBitisTarih" ColumnName="TezBitisTarih" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="MezuniyetTarihi" ColumnName="MezuniyetTarihi" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="MS1" ColumnName="MS1" />
+          <ScalarProperty Name="MS2" ColumnName="MS2" />
+          <ScalarProperty Name="MS3" ColumnName="MS3" />
+          <ScalarProperty Name="MS4" ColumnName="MS4" />
+          <ScalarProperty Name="MS5" ColumnName="MS5" />
+          <ScalarProperty Name="MS6" ColumnName="MS6" />
+          <ScalarProperty Name="MS7" ColumnName="MS7" />
+          <ScalarProperty Name="MS8" ColumnName="MS8" />
+          <ScalarProperty Name="MS9" ColumnName="MS9" />
+          <ScalarProperty Name="MS10" ColumnName="MS10" />
+          <ScalarProperty Name="MS11" ColumnName="MS11" />
+          <ScalarProperty Name="MS12" ColumnName="MS12" />
+          <ScalarProperty Name="MS13" ColumnName="MS13" />
+          <ScalarProperty Name="MS14" ColumnName="MS14" />
+          <ScalarProperty Name="MS15" ColumnName="MS15" />
+          <ScalarProperty Name="MS16" ColumnName="MS16" />
+          <ScalarProperty Name="MS17" ColumnName="MS17" />
+          <ScalarProperty Name="MS18" ColumnName="MS18" />
+          <ScalarProperty Name="MS19" ColumnName="MS19" />
+          <ScalarProperty Name="MS20" ColumnName="MS20" />
+          <ScalarProperty Name="MS21" ColumnName="MS21" />
+          <ScalarProperty Name="MS22" ColumnName="MS22" />
+          <ScalarProperty Name="MS23" ColumnName="MS23" />
+          <ScalarProperty Name="MS24" ColumnName="MS24" />
+          <ScalarProperty Name="Sem1" ColumnName="Sem1" />
+          <ScalarProperty Name="Sem2" ColumnName="Sem2" />
+          <ScalarProperty Name="Sem3" ColumnName="Sem3" />
+          <ScalarProperty Name="Sem4" ColumnName="Sem4" />
+          <ScalarProperty Name="Sem5" ColumnName="Sem5" />
+          <ScalarProperty Name="Sem6" ColumnName="Sem6" />
+          <ScalarProperty Name="Sem7" ColumnName="Sem7" />
+          <ScalarProperty Name="Sem8" ColumnName="Sem8" />
+          <ScalarProperty Name="Sem9" ColumnName="Sem9" />
+          <ScalarProperty Name="Sem10" ColumnName="Sem10" />
+          <ScalarProperty Name="Sem11" ColumnName="Sem11" />
+          <ScalarProperty Name="Sem12" ColumnName="Sem12" />
+          <ScalarProperty Name="Lit1" ColumnName="Lit1" />
+          <ScalarProperty Name="Lit2" ColumnName="Lit2" />
+          <ScalarProperty Name="Lit3" ColumnName="Lit3" />
+          <ScalarProperty Name="Lit4" ColumnName="Lit4" />
+          <ScalarProperty Name="Lit5" ColumnName="Lit5" />
+          <ScalarProperty Name="Lit6" ColumnName="Lit6" />
+          <ScalarProperty Name="Lit7" ColumnName="Lit7" />
+          <ScalarProperty Name="Lit8" ColumnName="Lit8" />
+          <ScalarProperty Name="Lit9" ColumnName="Lit9" />
+          <ScalarProperty Name="Lit10" ColumnName="Lit10" />
+          <ScalarProperty Name="Lit11" ColumnName="Lit11" />
+          <ScalarProperty Name="Lit12" ColumnName="Lit12" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Sinav4" ColumnName="Sinav4" />
+          <ScalarProperty Name="Sinav5" ColumnName="Sinav5" />
+          <ScalarProperty Name="Sinav6" ColumnName="Sinav6" />
+          <ScalarProperty Name="Sinav7" ColumnName="Sinav7" />
+          <ScalarProperty Name="Sinav8" ColumnName="Sinav8" />
+          <ScalarProperty Name="Sinav9" ColumnName="Sinav9" />
+          <ScalarProperty Name="Sinav10" ColumnName="Sinav10" />
+          <ScalarProperty Name="Sinav11" ColumnName="Sinav11" />
+          <ScalarProperty Name="Sinav12" ColumnName="Sinav12" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="MezunOlFakulte" ColumnName="MezunOlFakulte" />
+          <ScalarProperty Name="RotBasId" ColumnName="RotBasId" />
+          <ScalarProperty Name="RaporTarihi" ColumnName="RaporTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Rotasyon">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Rotasyon">
+        <MappingFragment StoreEntitySet="View_Rotasyon">
+          <ScalarProperty Name="RotasyonId" ColumnName="RotasyonId" />
+          <ScalarProperty Name="RotBaslangicTarihi" ColumnName="RotBaslangicTarihi" />
+          <ScalarProperty Name="RotBitisTarihi" ColumnName="RotBitisTarihi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnabilimId" ColumnName="AnabilimId" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="EgitimYili" ColumnName="EgitimYili" />
+          <ScalarProperty Name="UzmanlikAlanId" ColumnName="UzmanlikAlanId" />
+          <ScalarProperty Name="UzmanlikAd" ColumnName="UzmanlikAd" />
+          <ScalarProperty Name="Sure_ay" ColumnName="Sure_ay" />
+          <ScalarProperty Name="RotasyonEgitimDönemi" ColumnName="RotasyonEgitimDönemi" />
+          <ScalarProperty Name="RotSure_Ay" ColumnName="RotSure_Ay" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_RotasyonBilgi">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_RotasyonBilgi">
+        <MappingFragment StoreEntitySet="View_RotasyonBilgi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="Sure_yil" ColumnName="Sure_yil" />
+          <ScalarProperty Name="EgitimYili" ColumnName="EgitimYili" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Sure_ay" ColumnName="Sure_ay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Seminer">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Seminer">
+        <MappingFragment StoreEntitySet="View_Seminer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Sinav">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_Sinav">
+        <MappingFragment StoreEntitySet="View_Sinav">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Puan" ColumnName="Puan" />
+          <ScalarProperty Name="OgrtmTCkNo" ColumnName="OgrtmTCkNo" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="AsistanId" ColumnName="AsistanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_TezGelismeRaporu">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_TezGelismeRaporu">
+        <MappingFragment StoreEntitySet="View_TezGelismeRaporu">
+          <ScalarProperty Name="RaporId" ColumnName="RaporId" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="RaporNo1" ColumnName="RaporNo1" />
+          <ScalarProperty Name="But_GerekliDegil" ColumnName="But_GerekliDegil" />
+          <ScalarProperty Name="But_SDU_BAP_Koor_Bir" ColumnName="But_SDU_BAP_Koor_Bir" />
+          <ScalarProperty Name="But_TÜBİTAK" ColumnName="But_TÜBİTAK" />
+          <ScalarProperty Name="But_Uzmanlık_Ogr" ColumnName="But_Uzmanlık_Ogr" />
+          <ScalarProperty Name="But_Diger" ColumnName="But_Diger" />
+          <ScalarProperty Name="Tez_Cal_Bas" ColumnName="Tez_Cal_Bas" />
+          <ScalarProperty Name="Tez_Cal_Bas_Planlama" ColumnName="Tez_Cal_Bas_Planlama" />
+          <ScalarProperty Name="Tez_Cal_Bas_Yurutme" ColumnName="Tez_Cal_Bas_Yurutme" />
+          <ScalarProperty Name="Tez_Cal_Bas_Tamamladı" ColumnName="Tez_Cal_Bas_Tamamladı" />
+          <ScalarProperty Name="Mlzme_GereliDegil" ColumnName="Mlzme_GereliDegil" />
+          <ScalarProperty Name="Mlzme_Baslanmadi" ColumnName="Mlzme_Baslanmadi" />
+          <ScalarProperty Name="Mlzme_DevamEdiyo" ColumnName="Mlzme_DevamEdiyo" />
+          <ScalarProperty Name="Mlzme_Tamamlandi" ColumnName="Mlzme_Tamamlandi" />
+          <ScalarProperty Name="Veri_Baslanmadi" ColumnName="Veri_Baslanmadi" />
+          <ScalarProperty Name="Veri_DevamEdiyo" ColumnName="Veri_DevamEdiyo" />
+          <ScalarProperty Name="Veri_Tamamlandi" ColumnName="Veri_Tamamlandi" />
+          <ScalarProperty Name="Lab_GerekliDegil" ColumnName="Lab_GerekliDegil" />
+          <ScalarProperty Name="Lab_Baslanmadi" ColumnName="Lab_Baslanmadi" />
+          <ScalarProperty Name="Lab_DevamEdiyo" ColumnName="Lab_DevamEdiyo" />
+          <ScalarProperty Name="Lab_Tamamlandi" ColumnName="Lab_Tamamlandi" />
+          <ScalarProperty Name="Analiz_Baslanmadi" ColumnName="Analiz_Baslanmadi" />
+          <ScalarProperty Name="Analiz_DevamEdiyo" ColumnName="Analiz_DevamEdiyo" />
+          <ScalarProperty Name="Analiz_Tamamlandi" ColumnName="Analiz_Tamamlandi" />
+          <ScalarProperty Name="Tez_Yaz_Baslandi" ColumnName="Tez_Yaz_Baslandi" />
+          <ScalarProperty Name="Tez_Yaz_DevamEdiyo" ColumnName="Tez_Yaz_DevamEdiyo" />
+          <ScalarProperty Name="Tez_Yaz_Tamamlandi" ColumnName="Tez_Yaz_Tamamlandi" />
+          <ScalarProperty Name="Yrm_TzSure_Bitecek" ColumnName="Yrm_TzSure_Bitecek" />
+          <ScalarProperty Name="Yrm_EkSureGerekli" ColumnName="Yrm_EkSureGerekli" />
+          <ScalarProperty Name="Yrm_Tezde_Amac" ColumnName="Yrm_Tezde_Amac" />
+          <ScalarProperty Name="Yrm_Yeni_TezKonusu" ColumnName="Yrm_Yeni_TezKonusu" />
+          <ScalarProperty Name="RaporOlusturmaTarh" ColumnName="RaporOlusturmaTarh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_TezSinavBasvuruForm">
+      <EntityTypeMapping TypeName="AsistanTakipModel.View_TezSinavBasvuruForm">
+        <MappingFragment StoreEntitySet="View_TezSinavBasvuruForm">
+          <ScalarProperty Name="RaporId" ColumnName="RaporId" />
+          <ScalarProperty Name="TCkNo" ColumnName="TCkNo" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="AnadalAdi" ColumnName="AnadalAdi" />
+          <ScalarProperty Name="TezVerilmeTarih" ColumnName="TezVerilmeTarih" />
+          <ScalarProperty Name="TezBitisTarih" ColumnName="TezBitisTarih" />
+          <ScalarProperty Name="TezAdi" ColumnName="TezAdi" />
+          <ScalarProperty Name="OgrtmAd" ColumnName="OgrtmAd" />
+          <ScalarProperty Name="OgrtmSoyad" ColumnName="OgrtmSoyad" />
+          <ScalarProperty Name="Unvanı" ColumnName="Unvanı" />
+          <ScalarProperty Name="BaskanTC" ColumnName="BaskanTC" />
+          <ScalarProperty Name="BaskanAd" ColumnName="BaskanAd" />
+          <ScalarProperty Name="BaskanSoyad" ColumnName="BaskanSoyad" />
+          <ScalarProperty Name="TezSavunmaTarihi" ColumnName="TezSavunmaTarihi" />
+          <ScalarProperty Name="TezYeri" ColumnName="TezYeri" />
+          <ScalarProperty Name="RaporOlusturmaTarh" ColumnName="RaporOlusturmaTarh" />
+          <ScalarProperty Name="Juri1ID" ColumnName="Juri1ID" />
+          <ScalarProperty Name="Juri2ID" ColumnName="Juri2ID" />
+          <ScalarProperty Name="Juri3ID" ColumnName="Juri3ID" />
+          <ScalarProperty Name="YJuri1ID" ColumnName="YJuri1ID" />
+          <ScalarProperty Name="YJuri2ID" ColumnName="YJuri2ID" />
+          <ScalarProperty Name="GorevJuri1" ColumnName="GorevJuri1" />
+          <ScalarProperty Name="GorevJuri2" ColumnName="GorevJuri2" />
+          <ScalarProperty Name="GorevJuri3" ColumnName="GorevJuri3" />
+          <ScalarProperty Name="GorevYJuri1" ColumnName="GorevYJuri1" />
+          <ScalarProperty Name="GorevYJuri2" ColumnName="GorevYJuri2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

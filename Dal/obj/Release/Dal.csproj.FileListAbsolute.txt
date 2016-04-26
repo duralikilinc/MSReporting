@@ -1,0 +1,10 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\Dal.dll.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\Dal.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\Dal.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Release\Dal.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Release\Dal.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\AsistanTakipSistemi\Dal\obj\Release\Dal.pdb

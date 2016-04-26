@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Dal.Kanaat_Rapor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+<body>
+    <center>
+
+        <h3>Kanaat Formu Listesi</h3>
+    </center>
+
+   
+
+
+
+                     
+								<table class="table" id="myTable">
+									<thead>
+
+                        
+								<tr>
+                                    <th>
+                                        TC. 
+                                    </th>
+                                    <th>
+                                        Registration Number
+
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        SurName
+                                    </th>
+
+                                    <th>
+                                       department
+                                    </th>
+                                    <th>
+                                        semester
+
+                                    </th>
+                                    <th>
+                                       
+									year
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                          
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TC)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Registration Number)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SurName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.department)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.semester)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.year)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Report", "ExportPdf", new { raporid = item.ID }, new { target = "_blank" })|
+                                          
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                       
+                    
+
+</body>

@@ -1,0 +1,2519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsistanTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AnabilimDali">
+    <Key>
+      <PropertyRef Name="AnadalId" />
+    </Key>
+    <Property Name="AnadalId" Type="Int32" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sure_yil" Type="Int32" />
+    <Property Name="Sure_gun" Type="Int32" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Asistan_AnabilimDali" FromRole="AnabilimDali" ToRole="Asistan" />
+    <NavigationProperty Name="Juriler" Relationship="Self.FK_Juriler_AnabilimDali" FromRole="AnabilimDali" ToRole="Juriler" />
+    <NavigationProperty Name="Kullanici" Relationship="Self.FK_Kullanici_AnabilimDali" FromRole="AnabilimDali" ToRole="Kullanici" />
+    <NavigationProperty Name="RotasyonBilgi" Relationship="Self.FK_RotasyonBilgi_AnabilimDali" FromRole="AnabilimDali" ToRole="RotasyonBilgi" />
+  </EntityType>
+  <EntityType Name="Asistan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnabilimDali" Type="Int32" Nullable="false" />
+    <Property Name="BaslangicTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BitisTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezBitisTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezDanismaHocası" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BabaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AnaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dogumyeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AyrilisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="GittigiYer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MezuniyetDurumu" Type="Boolean" Nullable="false" />
+    <Property Name="MezuniyetTarihi" Type="DateTime" Precision="0" />
+    <Property Name="MezunOlFakulte" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AskerlikSube" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SevkTehirTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SonSevkThrTarihi" Type="DateTime" Precision="0" />
+    <Property Name="TUSDonemi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TusNotu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TescilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DiplomaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KayitTuru" Type="Int32" />
+    <Property Name="YabanciDilPuan" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sure_gun" Type="Int32" />
+    <Property Name="TezKabul" Type="Boolean" Nullable="false" />
+    <Property Name="Egitim_yili" Type="Int32" />
+    <Property Name="Sure_yil" Type="Int32" Nullable="false" />
+    <Property Name="UyariOnay" Type="Int32" Nullable="false" />
+    <Property Name="SinavUyari" Type="Int32" Nullable="false" />
+    <Property Name="TezRaporUyari" Type="Int32" Nullable="false" />
+    <Property Name="OgrDegUyari" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AnabilimDali1" Relationship="Self.FK_Asistan_AnabilimDali" FromRole="Asistan" ToRole="AnabilimDali" />
+    <NavigationProperty Name="KayitTuru1" Relationship="Self.FK_Asistan_KayitTuru" FromRole="Asistan" ToRole="KayitTuru" />
+    <NavigationProperty Name="OgretimUyesi" Relationship="Self.FK_Asistan_OgretimUyesi" FromRole="Asistan" ToRole="OgretimUyesi" />
+    <NavigationProperty Name="Ek2_Raporu" Relationship="Self.FK_Ek2_Raporu_Asistan" FromRole="Asistan" ToRole="Ek2_Raporu" />
+    <NavigationProperty Name="Ek3_Raporu" Relationship="Self.FK_Ek3_Raporu_Asistan1" FromRole="Asistan" ToRole="Ek3_Raporu" />
+    <NavigationProperty Name="Kanaat_Rapor" Relationship="Self.FK_Kanaat_Rapor_Asistan" FromRole="Asistan" ToRole="Kanaat_Rapor" />
+    <NavigationProperty Name="LiteraturBilgisi" Relationship="Self.FK_LiteraturBilgisi_Id" FromRole="Asistan" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri" Relationship="Self.FK_MezunSonrasiDersBilgileri_Id" FromRole="Asistan" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_Asistan1" FromRole="Asistan" ToRole="RaporKarne" />
+    <NavigationProperty Name="Rotasyon" Relationship="Self.FK_Rotasyon_Asistan" FromRole="Asistan" ToRole="Rotasyon" />
+    <NavigationProperty Name="SeminerBilgisi" Relationship="Self.FK_SeminerBilgisi_AsistanId" FromRole="Asistan" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SinavBilgisi" Relationship="Self.FK_SinavBilgisi_AsistanId" FromRole="Asistan" ToRole="SinavBilgisi" />
+  </EntityType>
+  <EntityType Name="Baskan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EPosta" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="AnabilimId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ek3_Raporu" Relationship="Self.FK_Ek3_Raporu_Baskan" FromRole="Baskan" ToRole="Ek3_Raporu" />
+  </EntityType>
+  <EntityType Name="Ek2_Raporu">
+    <Key>
+      <PropertyRef Name="RaporId" />
+    </Key>
+    <Property Name="RaporId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RaporNo1" Type="Int32" Nullable="false" />
+    <Property Name="But_GerekliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="But_SDU_BAP_Koor_Bir" Type="Boolean" Nullable="false" />
+    <Property Name="But_TÜBİTAK" Type="Boolean" Nullable="false" />
+    <Property Name="But_Uzmanlık_Ogr" Type="Boolean" Nullable="false" />
+    <Property Name="But_Diger" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Planlama" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Yurutme" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Tamamladı" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_GereliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_GerekliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_Baslandi" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_TzSure_Bitecek" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_EkSureGerekli" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_Tezde_Amac" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_Yeni_TezKonusu" Type="Boolean" Nullable="false" />
+    <Property Name="RaporOlusturmaTarh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Ek2_Raporu_Asistan" FromRole="Ek2_Raporu" ToRole="Asistan" />
+  </EntityType>
+  <EntityType Name="Ek3_Raporu">
+    <Key>
+      <PropertyRef Name="RaporId" />
+    </Key>
+    <Property Name="RaporId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="BaskanId" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TezSavunmaTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezYeri" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RaporOlusturmaTarh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Juri1ID" Type="Int32" />
+    <Property Name="Juri2ID" Type="Int32" />
+    <Property Name="Juri3ID" Type="Int32" />
+    <Property Name="YJuri1ID" Type="Int32" />
+    <Property Name="YJuri2ID" Type="Int32" />
+    <Property Name="GorevJuri1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevJuri2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevJuri3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevYJuri1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevYJuri2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Ek3_Raporu_Asistan1" FromRole="Ek3_Raporu" ToRole="Asistan" />
+    <NavigationProperty Name="Baskan" Relationship="Self.FK_Ek3_Raporu_Baskan" FromRole="Ek3_Raporu" ToRole="Baskan" />
+    <NavigationProperty Name="Juriler" Relationship="Self.FK_Ek3_Raporu_Juriler" FromRole="Ek3_Raporu" ToRole="Juriler" />
+    <NavigationProperty Name="Juriler1" Relationship="Self.FK_Ek3_Raporu_Juriler2" FromRole="Ek3_Raporu" ToRole="Juriler" />
+    <NavigationProperty Name="Juriler2" Relationship="Self.FK_Ek3_Raporu_Juriler3" FromRole="Ek3_Raporu" ToRole="Juriler" />
+    <NavigationProperty Name="Juriler3" Relationship="Self.FK_Ek3_Raporu_Juriler4" FromRole="Ek3_Raporu" ToRole="Juriler" />
+    <NavigationProperty Name="Juriler4" Relationship="Self.FK_Ek3_Raporu_Juriler5" FromRole="Ek3_Raporu" ToRole="Juriler" />
+  </EntityType>
+  <EntityType Name="Juriler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ad_Soyad" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UzmanlıkID" Type="Int32" Nullable="false" />
+    <Property Name="Grv_Uni" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Fakultesi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AnabilimDali" Relationship="Self.FK_Juriler_AnabilimDali" FromRole="Juriler" ToRole="AnabilimDali" />
+    <NavigationProperty Name="Ek3_Raporu" Relationship="Self.FK_Ek3_Raporu_Juriler" FromRole="Juriler" ToRole="Ek3_Raporu" />
+    <NavigationProperty Name="Ek3_Raporu1" Relationship="Self.FK_Ek3_Raporu_Juriler2" FromRole="Juriler" ToRole="Ek3_Raporu" />
+    <NavigationProperty Name="Ek3_Raporu2" Relationship="Self.FK_Ek3_Raporu_Juriler3" FromRole="Juriler" ToRole="Ek3_Raporu" />
+    <NavigationProperty Name="Ek3_Raporu3" Relationship="Self.FK_Ek3_Raporu_Juriler4" FromRole="Juriler" ToRole="Ek3_Raporu" />
+    <NavigationProperty Name="Ek3_Raporu4" Relationship="Self.FK_Ek3_Raporu_Juriler5" FromRole="Juriler" ToRole="Ek3_Raporu" />
+  </EntityType>
+  <EntityType Name="Kanaat_Rapor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="yil" Type="Int32" Nullable="false" />
+    <Property Name="donem" Type="Int32" Nullable="false" />
+    <Property Name="BaglliKurum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gorev_MesaiSaat" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Sorumluluk" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Yurutme" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Sonuc" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Calisma_Yetenek" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Bilimsellik" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Ekip" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Arastirma_İstek" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_Sonuclandirma" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_BilgiKaynak" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_YayinYapma" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yonetme_ProbAnaliz" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Organizasyon" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Iletisim" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Meslek_İliski" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_EgitimSorumlu" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_DigerCalisanlar" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_Hasta" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Kanaat_Rapor_Asistan" FromRole="Kanaat_Rapor" ToRole="Asistan" />
+  </EntityType>
+  <EntityType Name="KayitTuru">
+    <Key>
+      <PropertyRef Name="KayitTuruNo" />
+    </Key>
+    <Property Name="KayitTuruNo" Type="Int32" Nullable="false" />
+    <Property Name="KayitTuru1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Asistan_KayitTuru" FromRole="KayitTuru" ToRole="Asistan" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TckNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EPosta" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Yetki" Type="Boolean" Nullable="false" />
+    <Property Name="AnabilimId" Type="Int32" />
+    <NavigationProperty Name="AnabilimDali" Relationship="Self.FK_Kullanici_AnabilimDali" FromRole="Kullanici" ToRole="AnabilimDali" />
+  </EntityType>
+  <EntityType Name="LiteraturBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Konu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtUye" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_LiteraturBilgisi_Id" FromRole="LiteraturBilgisi" ToRole="Asistan" />
+    <NavigationProperty Name="OgretimUyesi" Relationship="Self.FK_LiteraturBilgisi_OgretimUyesi" FromRole="LiteraturBilgisi" ToRole="OgretimUyesi" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_LiteraturBilgisi" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne1" Relationship="Self.FK_RaporKarne_LiteraturBilgisi1" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne2" Relationship="Self.FK_RaporKarne_LiteraturBilgisi10" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne3" Relationship="Self.FK_RaporKarne_LiteraturBilgisi11" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne4" Relationship="Self.FK_RaporKarne_LiteraturBilgisi2" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne5" Relationship="Self.FK_RaporKarne_LiteraturBilgisi3" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne6" Relationship="Self.FK_RaporKarne_LiteraturBilgisi4" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne7" Relationship="Self.FK_RaporKarne_LiteraturBilgisi5" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne8" Relationship="Self.FK_RaporKarne_LiteraturBilgisi6" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne9" Relationship="Self.FK_RaporKarne_LiteraturBilgisi7" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne10" Relationship="Self.FK_RaporKarne_LiteraturBilgisi8" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne11" Relationship="Self.FK_RaporKarne_LiteraturBilgisi9" FromRole="LiteraturBilgisi" ToRole="RaporKarne" />
+  </EntityType>
+  <EntityType Name="LogFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserMac" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Kullanici" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorStackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorData" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MezunSonrasiDersBilgileri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="DersKonusu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgretimUyesi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_MezunSonrasiDersBilgileri_Id" FromRole="MezunSonrasiDersBilgileri" ToRole="Asistan" />
+    <NavigationProperty Name="OgretimUyesi1" Relationship="Self.FK_MezunSonrasiDersBilgileri_OgretimUyesi" FromRole="MezunSonrasiDersBilgileri" ToRole="OgretimUyesi" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne1" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri1" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne2" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri10" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne3" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri11" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne4" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri12" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne5" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri13" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne6" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri14" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne7" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri15" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne8" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri16" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne9" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri17" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne10" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri18" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne11" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri19" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne12" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri2" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne13" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri20" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne14" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri21" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne15" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri22" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne16" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri23" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne17" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri3" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne18" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri4" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne19" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri5" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne20" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri6" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne21" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri7" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne22" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri8" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne23" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri9" FromRole="MezunSonrasiDersBilgileri" ToRole="RaporKarne" />
+  </EntityType>
+  <EntityType Name="OgretimUyesi">
+    <Key>
+      <PropertyRef Name="OgrtmTCkNo" />
+    </Key>
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Anadali" Type="Int32" Nullable="false" />
+    <Property Name="Eposta" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyeti" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Asistan_OgretimUyesi" FromRole="OgretimUyesi" ToRole="Asistan" />
+    <NavigationProperty Name="LiteraturBilgisi" Relationship="Self.FK_LiteraturBilgisi_OgretimUyesi" FromRole="OgretimUyesi" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri" Relationship="Self.FK_MezunSonrasiDersBilgileri_OgretimUyesi" FromRole="OgretimUyesi" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="SeminerBilgisi" Relationship="Self.FK_SeminerBilgisi_OgretimUyesi" FromRole="OgretimUyesi" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SinavBilgisi" Relationship="Self.FK_SinavBilgisi_OgretimUyesi" FromRole="OgretimUyesi" ToRole="SinavBilgisi" />
+  </EntityType>
+  <EntityType Name="RaporKarne">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="RaporTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MS1" Type="Int32" />
+    <Property Name="MS2" Type="Int32" />
+    <Property Name="MS3" Type="Int32" />
+    <Property Name="MS4" Type="Int32" />
+    <Property Name="MS5" Type="Int32" />
+    <Property Name="MS6" Type="Int32" />
+    <Property Name="MS7" Type="Int32" />
+    <Property Name="MS8" Type="Int32" />
+    <Property Name="MS9" Type="Int32" />
+    <Property Name="MS10" Type="Int32" />
+    <Property Name="MS11" Type="Int32" />
+    <Property Name="MS12" Type="Int32" />
+    <Property Name="MS13" Type="Int32" />
+    <Property Name="MS14" Type="Int32" />
+    <Property Name="MS15" Type="Int32" />
+    <Property Name="MS16" Type="Int32" />
+    <Property Name="MS17" Type="Int32" />
+    <Property Name="MS18" Type="Int32" />
+    <Property Name="MS19" Type="Int32" />
+    <Property Name="MS20" Type="Int32" />
+    <Property Name="MS21" Type="Int32" />
+    <Property Name="MS22" Type="Int32" />
+    <Property Name="MS23" Type="Int32" />
+    <Property Name="MS24" Type="Int32" />
+    <Property Name="RotId" Type="Int32" />
+    <Property Name="RotBasId" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Sem1" Type="Int32" />
+    <Property Name="Sem2" Type="Int32" />
+    <Property Name="Sem3" Type="Int32" />
+    <Property Name="Sem4" Type="Int32" />
+    <Property Name="Sem5" Type="Int32" />
+    <Property Name="Sem6" Type="Int32" />
+    <Property Name="Sem7" Type="Int32" />
+    <Property Name="Sem8" Type="Int32" />
+    <Property Name="Sem9" Type="Int32" />
+    <Property Name="Sem10" Type="Int32" />
+    <Property Name="Sem11" Type="Int32" />
+    <Property Name="Sem12" Type="Int32" />
+    <Property Name="Lit1" Type="Int32" />
+    <Property Name="Lit2" Type="Int32" />
+    <Property Name="Lit3" Type="Int32" />
+    <Property Name="Lit4" Type="Int32" />
+    <Property Name="Lit5" Type="Int32" />
+    <Property Name="Lit6" Type="Int32" />
+    <Property Name="Lit7" Type="Int32" />
+    <Property Name="Lit8" Type="Int32" />
+    <Property Name="Lit9" Type="Int32" />
+    <Property Name="Lit10" Type="Int32" />
+    <Property Name="Lit11" Type="Int32" />
+    <Property Name="Lit12" Type="Int32" />
+    <Property Name="Sinav1" Type="Int32" />
+    <Property Name="Sinav2" Type="Int32" />
+    <Property Name="Sinav3" Type="Int32" />
+    <Property Name="Sinav4" Type="Int32" />
+    <Property Name="Sinav5" Type="Int32" />
+    <Property Name="Sinav6" Type="Int32" />
+    <Property Name="Sinav7" Type="Int32" />
+    <Property Name="Sinav8" Type="Int32" />
+    <Property Name="Sinav9" Type="Int32" />
+    <Property Name="Sinav10" Type="Int32" />
+    <Property Name="Sinav11" Type="Int32" />
+    <Property Name="Sinav12" Type="Int32" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_RaporKarne_Asistan1" FromRole="RaporKarne" ToRole="Asistan" />
+    <NavigationProperty Name="LiteraturBilgisi" Relationship="Self.FK_RaporKarne_LiteraturBilgisi" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi1" Relationship="Self.FK_RaporKarne_LiteraturBilgisi1" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi2" Relationship="Self.FK_RaporKarne_LiteraturBilgisi10" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi3" Relationship="Self.FK_RaporKarne_LiteraturBilgisi11" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi4" Relationship="Self.FK_RaporKarne_LiteraturBilgisi2" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi5" Relationship="Self.FK_RaporKarne_LiteraturBilgisi3" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi6" Relationship="Self.FK_RaporKarne_LiteraturBilgisi4" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi7" Relationship="Self.FK_RaporKarne_LiteraturBilgisi5" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi8" Relationship="Self.FK_RaporKarne_LiteraturBilgisi6" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi9" Relationship="Self.FK_RaporKarne_LiteraturBilgisi7" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi10" Relationship="Self.FK_RaporKarne_LiteraturBilgisi8" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="LiteraturBilgisi11" Relationship="Self.FK_RaporKarne_LiteraturBilgisi9" FromRole="RaporKarne" ToRole="LiteraturBilgisi" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri1" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri1" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri2" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri10" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri3" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri11" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri4" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri12" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri5" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri13" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri6" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri14" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri7" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri15" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri8" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri16" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri9" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri17" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri10" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri18" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri11" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri19" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri12" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri2" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri13" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri20" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri14" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri21" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri15" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri22" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri16" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri23" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri17" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri3" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri18" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri4" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri19" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri5" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri20" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri6" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri21" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri7" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri22" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri8" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="MezunSonrasiDersBilgileri23" Relationship="Self.FK_RaporKarne_MezunSonrasiDersBilgileri9" FromRole="RaporKarne" ToRole="MezunSonrasiDersBilgileri" />
+    <NavigationProperty Name="Rotasyon" Relationship="Self.FK_RaporKarne_Rotasyon1" FromRole="RaporKarne" ToRole="Rotasyon" />
+    <NavigationProperty Name="SeminerBilgisi" Relationship="Self.FK_RaporKarne_SeminerBilgisi" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi1" Relationship="Self.FK_RaporKarne_SeminerBilgisi1" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi2" Relationship="Self.FK_RaporKarne_SeminerBilgisi10" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi3" Relationship="Self.FK_RaporKarne_SeminerBilgisi11" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi4" Relationship="Self.FK_RaporKarne_SeminerBilgisi2" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi5" Relationship="Self.FK_RaporKarne_SeminerBilgisi3" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi6" Relationship="Self.FK_RaporKarne_SeminerBilgisi4" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi7" Relationship="Self.FK_RaporKarne_SeminerBilgisi5" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi8" Relationship="Self.FK_RaporKarne_SeminerBilgisi6" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi9" Relationship="Self.FK_RaporKarne_SeminerBilgisi7" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi10" Relationship="Self.FK_RaporKarne_SeminerBilgisi8" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SeminerBilgisi11" Relationship="Self.FK_RaporKarne_SeminerBilgisi9" FromRole="RaporKarne" ToRole="SeminerBilgisi" />
+    <NavigationProperty Name="SinavBilgisi" Relationship="Self.FK_RaporKarne_SinavBilgisi" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi1" Relationship="Self.FK_RaporKarne_SinavBilgisi1" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi2" Relationship="Self.FK_RaporKarne_SinavBilgisi10" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi3" Relationship="Self.FK_RaporKarne_SinavBilgisi11" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi4" Relationship="Self.FK_RaporKarne_SinavBilgisi2" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi5" Relationship="Self.FK_RaporKarne_SinavBilgisi3" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi6" Relationship="Self.FK_RaporKarne_SinavBilgisi4" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi7" Relationship="Self.FK_RaporKarne_SinavBilgisi5" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi8" Relationship="Self.FK_RaporKarne_SinavBilgisi6" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi9" Relationship="Self.FK_RaporKarne_SinavBilgisi7" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi10" Relationship="Self.FK_RaporKarne_SinavBilgisi8" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+    <NavigationProperty Name="SinavBilgisi11" Relationship="Self.FK_RaporKarne_SinavBilgisi9" FromRole="RaporKarne" ToRole="SinavBilgisi" />
+  </EntityType>
+  <EntityType Name="Rotasyon">
+    <Key>
+      <PropertyRef Name="RotasyonId" />
+    </Key>
+    <Property Name="RotasyonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RotBaslangicTarihi" Type="DateTime" Precision="0" />
+    <Property Name="RotBitisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="RotasyonBilgiId" Type="Int32" />
+    <Property Name="RotasyonEgitimDönemi" Type="Int32" />
+    <Property Name="Sure_ay" Type="Int32" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="UyariOnay" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_Rotasyon_Asistan" FromRole="Rotasyon" ToRole="Asistan" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_Rotasyon1" FromRole="Rotasyon" ToRole="RaporKarne" />
+    <NavigationProperty Name="RotasyonBilgi" Relationship="Self.FK_Rotasyon_RotasyonBilgi" FromRole="Rotasyon" ToRole="RotasyonBilgi" />
+  </EntityType>
+  <EntityType Name="RotasyonBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnabilimId" Type="Int32" Nullable="false" />
+    <Property Name="EgitimYili" Type="Int32" />
+    <Property Name="UzmanlikId" Type="Int32" Nullable="false" />
+    <Property Name="Sure_ay" Type="Int32" />
+    <NavigationProperty Name="AnabilimDali" Relationship="Self.FK_RotasyonBilgi_AnabilimDali" FromRole="RotasyonBilgi" ToRole="AnabilimDali" />
+    <NavigationProperty Name="Rotasyon" Relationship="Self.FK_Rotasyon_RotasyonBilgi" FromRole="RotasyonBilgi" ToRole="Rotasyon" />
+    <NavigationProperty Name="UzmanlikAlani" Relationship="Self.FK_RotasyonBilgi_UzmanlikAlani" FromRole="RotasyonBilgi" ToRole="UzmanlikAlani" />
+  </EntityType>
+  <EntityType Name="SeminerBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Konu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtmID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_SeminerBilgisi_AsistanId" FromRole="SeminerBilgisi" ToRole="Asistan" />
+    <NavigationProperty Name="OgretimUyesi" Relationship="Self.FK_SeminerBilgisi_OgretimUyesi" FromRole="SeminerBilgisi" ToRole="OgretimUyesi" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_SeminerBilgisi" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne1" Relationship="Self.FK_RaporKarne_SeminerBilgisi1" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne2" Relationship="Self.FK_RaporKarne_SeminerBilgisi10" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne3" Relationship="Self.FK_RaporKarne_SeminerBilgisi11" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne4" Relationship="Self.FK_RaporKarne_SeminerBilgisi2" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne5" Relationship="Self.FK_RaporKarne_SeminerBilgisi3" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne6" Relationship="Self.FK_RaporKarne_SeminerBilgisi4" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne7" Relationship="Self.FK_RaporKarne_SeminerBilgisi5" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne8" Relationship="Self.FK_RaporKarne_SeminerBilgisi6" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne9" Relationship="Self.FK_RaporKarne_SeminerBilgisi7" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne10" Relationship="Self.FK_RaporKarne_SeminerBilgisi8" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne11" Relationship="Self.FK_RaporKarne_SeminerBilgisi9" FromRole="SeminerBilgisi" ToRole="RaporKarne" />
+  </EntityType>
+  <EntityType Name="SinavBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Puan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OgrtUye" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Asistan" Relationship="Self.FK_SinavBilgisi_AsistanId" FromRole="SinavBilgisi" ToRole="Asistan" />
+    <NavigationProperty Name="OgretimUyesi" Relationship="Self.FK_SinavBilgisi_OgretimUyesi" FromRole="SinavBilgisi" ToRole="OgretimUyesi" />
+    <NavigationProperty Name="RaporKarne" Relationship="Self.FK_RaporKarne_SinavBilgisi" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne1" Relationship="Self.FK_RaporKarne_SinavBilgisi1" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne2" Relationship="Self.FK_RaporKarne_SinavBilgisi10" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne3" Relationship="Self.FK_RaporKarne_SinavBilgisi11" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne4" Relationship="Self.FK_RaporKarne_SinavBilgisi2" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne5" Relationship="Self.FK_RaporKarne_SinavBilgisi3" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne6" Relationship="Self.FK_RaporKarne_SinavBilgisi4" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne7" Relationship="Self.FK_RaporKarne_SinavBilgisi5" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne8" Relationship="Self.FK_RaporKarne_SinavBilgisi6" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne9" Relationship="Self.FK_RaporKarne_SinavBilgisi7" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne10" Relationship="Self.FK_RaporKarne_SinavBilgisi8" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+    <NavigationProperty Name="RaporKarne11" Relationship="Self.FK_RaporKarne_SinavBilgisi9" FromRole="SinavBilgisi" ToRole="RaporKarne" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UzmanlikAlani">
+    <Key>
+      <PropertyRef Name="UzmanlikAlanId" />
+    </Key>
+    <Property Name="UzmanlikAlanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RotasyonBilgi" Relationship="Self.FK_RotasyonBilgi_UzmanlikAlani" FromRole="UzmanlikAlani" ToRole="RotasyonBilgi" />
+  </EntityType>
+  <EntityType Name="View_AsistanRotasyon">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="BaslangicTarih" />
+      <PropertyRef Name="BitisTarih" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="UzmanlikAd" />
+      <PropertyRef Name="AsistanPasif" />
+      <PropertyRef Name="RotasyonPasif" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaslangicTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BitisTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezBitisTarih" Type="DateTime" Precision="0" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="MezunOlFakulte" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RotBaslangicTarihi" Type="DateTime" Precision="0" />
+    <Property Name="RotBitisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="UzmanlikAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AsistanPasif" Type="Boolean" Nullable="false" />
+    <Property Name="RotasyonPasif" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_KanaatForm">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="BaslangicTarih" />
+      <PropertyRef Name="BitisTarih" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="yil" />
+      <PropertyRef Name="donem" />
+      <PropertyRef Name="BaglliKurum" />
+      <PropertyRef Name="Gorev_MesaiSaat" />
+      <PropertyRef Name="Gorev_Sorumluluk" />
+      <PropertyRef Name="Gorev_Yurutme" />
+      <PropertyRef Name="Gorev_Sonuc" />
+      <PropertyRef Name="Gorev_Ortalama" />
+      <PropertyRef Name="Calisma_Yetenek" />
+      <PropertyRef Name="Calisma_Bilimsellik" />
+      <PropertyRef Name="Calisma_Ekip" />
+      <PropertyRef Name="Calisma_Ortalama" />
+      <PropertyRef Name="Arastirma_İstek" />
+      <PropertyRef Name="Arastirma_Sonuclandirma" />
+      <PropertyRef Name="Arastirma_BilgiKaynak" />
+      <PropertyRef Name="Arastirma_YayinYapma" />
+      <PropertyRef Name="Arastirma_Ortalama" />
+      <PropertyRef Name="Yonetme_ProbAnaliz" />
+      <PropertyRef Name="Yonetme_Organizasyon" />
+      <PropertyRef Name="Yonetme_Iletisim" />
+      <PropertyRef Name="Yonetme_Ortalama" />
+      <PropertyRef Name="Meslek_İliski" />
+      <PropertyRef Name="Meslek_EgitimSorumlu" />
+      <PropertyRef Name="Meslek_DigerCalisanlar" />
+      <PropertyRef Name="Meslek_Hasta" />
+      <PropertyRef Name="Meslek_Ortalama" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaslangicTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BitisTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="yil" Type="Int32" Nullable="false" />
+    <Property Name="donem" Type="Int32" Nullable="false" />
+    <Property Name="BaglliKurum" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gorev_MesaiSaat" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Sorumluluk" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Yurutme" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Sonuc" Type="Int32" Nullable="false" />
+    <Property Name="Gorev_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Calisma_Yetenek" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Bilimsellik" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Ekip" Type="Int32" Nullable="false" />
+    <Property Name="Calisma_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Arastirma_İstek" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_Sonuclandirma" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_BilgiKaynak" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_YayinYapma" Type="Int32" Nullable="false" />
+    <Property Name="Arastirma_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yonetme_ProbAnaliz" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Organizasyon" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Iletisim" Type="Int32" Nullable="false" />
+    <Property Name="Yonetme_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Meslek_İliski" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_EgitimSorumlu" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_DigerCalisanlar" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_Hasta" Type="Int32" Nullable="false" />
+    <Property Name="Meslek_Ortalama" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Lit">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="AsistanId" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Konu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Mezun">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="AsistanId" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="DersKonusu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Personel_TotalAsistan">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="BaslangicTarih" />
+      <PropertyRef Name="BitisTarih" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="Cinsiyet" />
+      <PropertyRef Name="MezuniyetDurumu" />
+      <PropertyRef Name="KayitTuru" />
+      <PropertyRef Name="TezKabul" />
+      <PropertyRef Name="Sure_yil" />
+      <PropertyRef Name="Pasif" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaslangicTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BitisTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezBitisTarih" Type="DateTime" Precision="0" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BabaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AnaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dogumyeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AyrilisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="GittigiYer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MezuniyetDurumu" Type="Boolean" Nullable="false" />
+    <Property Name="MezuniyetTarihi" Type="DateTime" Precision="0" />
+    <Property Name="MezunOlFakulte" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AskerlikSube" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SevkTehirTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SonSevkThrTarihi" Type="DateTime" Precision="0" />
+    <Property Name="TUSDonemi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TusNotu" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TescilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DiplomaNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KayitTuru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YabanciDilPuan" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sure_gun" Type="Int32" />
+    <Property Name="TezKabul" Type="Boolean" Nullable="false" />
+    <Property Name="Egitim_yili" Type="Int32" />
+    <Property Name="Sure_yil" Type="Int32" Nullable="false" />
+    <Property Name="Pasif" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_RaporKarne">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="BaslangicTarih" />
+      <PropertyRef Name="BitisTarih" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="RaporTarihi" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaslangicTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BitisTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezBitisTarih" Type="DateTime" Precision="0" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="MezuniyetTarihi" Type="DateTime" Precision="0" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MS1" Type="Int32" />
+    <Property Name="MS2" Type="Int32" />
+    <Property Name="MS3" Type="Int32" />
+    <Property Name="MS4" Type="Int32" />
+    <Property Name="MS5" Type="Int32" />
+    <Property Name="MS6" Type="Int32" />
+    <Property Name="MS7" Type="Int32" />
+    <Property Name="MS8" Type="Int32" />
+    <Property Name="MS9" Type="Int32" />
+    <Property Name="MS10" Type="Int32" />
+    <Property Name="MS11" Type="Int32" />
+    <Property Name="MS12" Type="Int32" />
+    <Property Name="MS13" Type="Int32" />
+    <Property Name="MS14" Type="Int32" />
+    <Property Name="MS15" Type="Int32" />
+    <Property Name="MS16" Type="Int32" />
+    <Property Name="MS17" Type="Int32" />
+    <Property Name="MS18" Type="Int32" />
+    <Property Name="MS19" Type="Int32" />
+    <Property Name="MS20" Type="Int32" />
+    <Property Name="MS21" Type="Int32" />
+    <Property Name="MS22" Type="Int32" />
+    <Property Name="MS23" Type="Int32" />
+    <Property Name="MS24" Type="Int32" />
+    <Property Name="Sem1" Type="Int32" />
+    <Property Name="Sem2" Type="Int32" />
+    <Property Name="Sem3" Type="Int32" />
+    <Property Name="Sem4" Type="Int32" />
+    <Property Name="Sem5" Type="Int32" />
+    <Property Name="Sem6" Type="Int32" />
+    <Property Name="Sem7" Type="Int32" />
+    <Property Name="Sem8" Type="Int32" />
+    <Property Name="Sem9" Type="Int32" />
+    <Property Name="Sem10" Type="Int32" />
+    <Property Name="Sem11" Type="Int32" />
+    <Property Name="Sem12" Type="Int32" />
+    <Property Name="Lit1" Type="Int32" />
+    <Property Name="Lit2" Type="Int32" />
+    <Property Name="Lit3" Type="Int32" />
+    <Property Name="Lit4" Type="Int32" />
+    <Property Name="Lit5" Type="Int32" />
+    <Property Name="Lit6" Type="Int32" />
+    <Property Name="Lit7" Type="Int32" />
+    <Property Name="Lit8" Type="Int32" />
+    <Property Name="Lit9" Type="Int32" />
+    <Property Name="Lit10" Type="Int32" />
+    <Property Name="Lit11" Type="Int32" />
+    <Property Name="Lit12" Type="Int32" />
+    <Property Name="Sinav1" Type="Int32" />
+    <Property Name="Sinav2" Type="Int32" />
+    <Property Name="Sinav3" Type="Int32" />
+    <Property Name="Sinav4" Type="Int32" />
+    <Property Name="Sinav5" Type="Int32" />
+    <Property Name="Sinav6" Type="Int32" />
+    <Property Name="Sinav7" Type="Int32" />
+    <Property Name="Sinav8" Type="Int32" />
+    <Property Name="Sinav9" Type="Int32" />
+    <Property Name="Sinav10" Type="Int32" />
+    <Property Name="Sinav11" Type="Int32" />
+    <Property Name="Sinav12" Type="Int32" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MezunOlFakulte" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RotBasId" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="RaporTarihi" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="View_Rotasyon">
+    <Key>
+      <PropertyRef Name="RotasyonId" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="AnabilimId" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="UzmanlikAlanId" />
+      <PropertyRef Name="UzmanlikAd" />
+      <PropertyRef Name="AsistanId" />
+    </Key>
+    <Property Name="RotasyonId" Type="Int32" Nullable="false" />
+    <Property Name="RotBaslangicTarihi" Type="DateTime" Precision="0" />
+    <Property Name="RotBitisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="AnabilimId" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EgitimYili" Type="Int32" />
+    <Property Name="UzmanlikAlanId" Type="Int32" Nullable="false" />
+    <Property Name="UzmanlikAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sure_ay" Type="Int32" />
+    <Property Name="RotasyonEgitimDönemi" Type="Int32" />
+    <Property Name="RotSure_Ay" Type="Int32" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_RotasyonBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="Ad" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sure_yil" Type="Int32" />
+    <Property Name="EgitimYili" Type="Int32" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sure_ay" Type="Int32" />
+  </EntityType>
+  <EntityType Name="View_Seminer">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="AsistanId" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Konu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_Sinav">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OgrtmTCkNo" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="AsistanId" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Puan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OgrtmTCkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AsistanId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_TezGelismeRaporu">
+    <Key>
+      <PropertyRef Name="RaporId" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="Tarih" />
+      <PropertyRef Name="RaporNo1" />
+      <PropertyRef Name="But_GerekliDegil" />
+      <PropertyRef Name="But_SDU_BAP_Koor_Bir" />
+      <PropertyRef Name="But_TÜBİTAK" />
+      <PropertyRef Name="But_Uzmanlık_Ogr" />
+      <PropertyRef Name="But_Diger" />
+      <PropertyRef Name="Tez_Cal_Bas" />
+      <PropertyRef Name="Tez_Cal_Bas_Planlama" />
+      <PropertyRef Name="Tez_Cal_Bas_Yurutme" />
+      <PropertyRef Name="Tez_Cal_Bas_Tamamladı" />
+      <PropertyRef Name="Mlzme_GereliDegil" />
+      <PropertyRef Name="Mlzme_Baslanmadi" />
+      <PropertyRef Name="Mlzme_DevamEdiyo" />
+      <PropertyRef Name="Mlzme_Tamamlandi" />
+      <PropertyRef Name="Veri_Baslanmadi" />
+      <PropertyRef Name="Veri_DevamEdiyo" />
+      <PropertyRef Name="Veri_Tamamlandi" />
+      <PropertyRef Name="Lab_GerekliDegil" />
+      <PropertyRef Name="Lab_Baslanmadi" />
+      <PropertyRef Name="Lab_DevamEdiyo" />
+      <PropertyRef Name="Lab_Tamamlandi" />
+      <PropertyRef Name="Analiz_Baslanmadi" />
+      <PropertyRef Name="Analiz_DevamEdiyo" />
+      <PropertyRef Name="Analiz_Tamamlandi" />
+      <PropertyRef Name="Tez_Yaz_Baslandi" />
+      <PropertyRef Name="Tez_Yaz_DevamEdiyo" />
+      <PropertyRef Name="Tez_Yaz_Tamamlandi" />
+      <PropertyRef Name="Yrm_TzSure_Bitecek" />
+      <PropertyRef Name="Yrm_EkSureGerekli" />
+      <PropertyRef Name="Yrm_Tezde_Amac" />
+      <PropertyRef Name="Yrm_Yeni_TezKonusu" />
+      <PropertyRef Name="RaporOlusturmaTarh" />
+    </Key>
+    <Property Name="RaporId" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RaporNo1" Type="Int32" Nullable="false" />
+    <Property Name="But_GerekliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="But_SDU_BAP_Koor_Bir" Type="Boolean" Nullable="false" />
+    <Property Name="But_TÜBİTAK" Type="Boolean" Nullable="false" />
+    <Property Name="But_Uzmanlık_Ogr" Type="Boolean" Nullable="false" />
+    <Property Name="But_Diger" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Planlama" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Yurutme" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Cal_Bas_Tamamladı" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_GereliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Mlzme_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Veri_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_GerekliDegil" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Lab_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_Baslanmadi" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Analiz_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_Baslandi" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_DevamEdiyo" Type="Boolean" Nullable="false" />
+    <Property Name="Tez_Yaz_Tamamlandi" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_TzSure_Bitecek" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_EkSureGerekli" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_Tezde_Amac" Type="Boolean" Nullable="false" />
+    <Property Name="Yrm_Yeni_TezKonusu" Type="Boolean" Nullable="false" />
+    <Property Name="RaporOlusturmaTarh" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="View_TezSinavBasvuruForm">
+    <Key>
+      <PropertyRef Name="RaporId" />
+      <PropertyRef Name="TCkNo" />
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Soyad" />
+      <PropertyRef Name="AnadalAdi" />
+      <PropertyRef Name="OgrtmAd" />
+      <PropertyRef Name="OgrtmSoyad" />
+      <PropertyRef Name="BaskanTC" />
+      <PropertyRef Name="BaskanAd" />
+      <PropertyRef Name="BaskanSoyad" />
+      <PropertyRef Name="TezSavunmaTarihi" />
+      <PropertyRef Name="RaporOlusturmaTarh" />
+    </Key>
+    <Property Name="RaporId" Type="Int32" Nullable="false" />
+    <Property Name="TCkNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnadalAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TezVerilmeTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezBitisTarih" Type="DateTime" Precision="0" />
+    <Property Name="TezAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OgrtmAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OgrtmSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unvanı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BaskanTC" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaskanAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaskanSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TezSavunmaTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TezYeri" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RaporOlusturmaTarh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Juri1ID" Type="Int32" />
+    <Property Name="Juri2ID" Type="Int32" />
+    <Property Name="Juri3ID" Type="Int32" />
+    <Property Name="YJuri1ID" Type="Int32" />
+    <Property Name="YJuri2ID" Type="Int32" />
+    <Property Name="GorevJuri1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevJuri2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevJuri3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevYJuri1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GorevYJuri2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Asistan_AnabilimDali">
+    <End Role="AnabilimDali" Type="Self.AnabilimDali" Multiplicity="1" />
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnabilimDali">
+        <PropertyRef Name="AnadalId" />
+      </Principal>
+      <Dependent Role="Asistan">
+        <PropertyRef Name="AnabilimDali" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Juriler_AnabilimDali">
+    <End Role="AnabilimDali" Type="Self.AnabilimDali" Multiplicity="1" />
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnabilimDali">
+        <PropertyRef Name="AnadalId" />
+      </Principal>
+      <Dependent Role="Juriler">
+        <PropertyRef Name="UzmanlıkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_AnabilimDali">
+    <End Role="AnabilimDali" Type="Self.AnabilimDali" Multiplicity="0..1" />
+    <End Role="Kullanici" Type="Self.Kullanici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnabilimDali">
+        <PropertyRef Name="AnadalId" />
+      </Principal>
+      <Dependent Role="Kullanici">
+        <PropertyRef Name="AnabilimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RotasyonBilgi_AnabilimDali">
+    <End Role="AnabilimDali" Type="Self.AnabilimDali" Multiplicity="1" />
+    <End Role="RotasyonBilgi" Type="Self.RotasyonBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnabilimDali">
+        <PropertyRef Name="AnadalId" />
+      </Principal>
+      <Dependent Role="RotasyonBilgi">
+        <PropertyRef Name="AnabilimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asistan_KayitTuru">
+    <End Role="KayitTuru" Type="Self.KayitTuru" Multiplicity="0..1" />
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KayitTuru">
+        <PropertyRef Name="KayitTuruNo" />
+      </Principal>
+      <Dependent Role="Asistan">
+        <PropertyRef Name="KayitTuru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asistan_OgretimUyesi">
+    <End Role="OgretimUyesi" Type="Self.OgretimUyesi" Multiplicity="0..1" />
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgretimUyesi">
+        <PropertyRef Name="OgrtmTCkNo" />
+      </Principal>
+      <Dependent Role="Asistan">
+        <PropertyRef Name="TezDanismaHocası" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek2_Raporu_Asistan">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="Ek2_Raporu" Type="Self.Ek2_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek2_Raporu">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Asistan1">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kanaat_Rapor_Asistan">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="Kanaat_Rapor" Type="Self.Kanaat_Rapor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kanaat_Rapor">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiteraturBilgisi_Id">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LiteraturBilgisi">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MezunSonrasiDersBilgileri_Id">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_Asistan1">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rotasyon_Asistan">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="Rotasyon" Type="Self.Rotasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rotasyon">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeminerBilgisi_AsistanId">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SeminerBilgisi">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SinavBilgisi_AsistanId">
+    <End Role="Asistan" Type="Self.Asistan" Multiplicity="1" />
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SinavBilgisi">
+        <PropertyRef Name="AsistanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Baskan">
+    <End Role="Baskan" Type="Self.Baskan" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Baskan">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="BaskanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Juriler">
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="Juri1ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Juriler2">
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="Juri2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Juriler3">
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="Juri3ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Juriler4">
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="YJuri1ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ek3_Raporu_Juriler5">
+    <End Role="Juriler" Type="Self.Juriler" Multiplicity="0..1" />
+    <End Role="Ek3_Raporu" Type="Self.Ek3_Raporu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Ek3_Raporu">
+        <PropertyRef Name="YJuri2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiteraturBilgisi_OgretimUyesi">
+    <End Role="OgretimUyesi" Type="Self.OgretimUyesi" Multiplicity="0..1" />
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgretimUyesi">
+        <PropertyRef Name="OgrtmTCkNo" />
+      </Principal>
+      <Dependent Role="LiteraturBilgisi">
+        <PropertyRef Name="OgrtUye" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi1">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi10">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi11">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi2">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi3">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi4">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi5">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi6">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi7">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi8">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_LiteraturBilgisi9">
+    <End Role="LiteraturBilgisi" Type="Self.LiteraturBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiteraturBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Lit10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MezunSonrasiDersBilgileri_OgretimUyesi">
+    <End Role="OgretimUyesi" Type="Self.OgretimUyesi" Multiplicity="0..1" />
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgretimUyesi">
+        <PropertyRef Name="OgrtmTCkNo" />
+      </Principal>
+      <Dependent Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="OgretimUyesi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri1">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri10">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri11">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri12">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS13" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri13">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS14" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri14">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS15" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri15">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS16" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri16">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS17" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri17">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS18" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri18">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS19" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri19">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS20" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri2">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri20">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS21" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri21">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS22" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri22">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS23" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri23">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS24" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri3">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri4">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri5">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri6">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri7">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri8">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_MezunSonrasiDersBilgileri9">
+    <End Role="MezunSonrasiDersBilgileri" Type="Self.MezunSonrasiDersBilgileri" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MezunSonrasiDersBilgileri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="MS10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeminerBilgisi_OgretimUyesi">
+    <End Role="OgretimUyesi" Type="Self.OgretimUyesi" Multiplicity="0..1" />
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgretimUyesi">
+        <PropertyRef Name="OgrtmTCkNo" />
+      </Principal>
+      <Dependent Role="SeminerBilgisi">
+        <PropertyRef Name="OgrtmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SinavBilgisi_OgretimUyesi">
+    <End Role="OgretimUyesi" Type="Self.OgretimUyesi" Multiplicity="0..1" />
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgretimUyesi">
+        <PropertyRef Name="OgrtmTCkNo" />
+      </Principal>
+      <Dependent Role="SinavBilgisi">
+        <PropertyRef Name="OgrtUye" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_Rotasyon1">
+    <End Role="Rotasyon" Type="Self.Rotasyon" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rotasyon">
+        <PropertyRef Name="RotasyonId" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="RotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi1">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi10">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi11">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi2">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi3">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi4">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi5">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi6">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi7">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi8">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SeminerBilgisi9">
+    <End Role="SeminerBilgisi" Type="Self.SeminerBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeminerBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sem10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi1">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi10">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi11">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi2">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi3">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi4">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi5">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi6">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi7">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi8">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RaporKarne_SinavBilgisi9">
+    <End Role="SinavBilgisi" Type="Self.SinavBilgisi" Multiplicity="0..1" />
+    <End Role="RaporKarne" Type="Self.RaporKarne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinavBilgisi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaporKarne">
+        <PropertyRef Name="Sinav10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rotasyon_RotasyonBilgi">
+    <End Role="RotasyonBilgi" Type="Self.RotasyonBilgi" Multiplicity="0..1" />
+    <End Role="Rotasyon" Type="Self.Rotasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RotasyonBilgi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rotasyon">
+        <PropertyRef Name="RotasyonBilgiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RotasyonBilgi_UzmanlikAlani">
+    <End Role="UzmanlikAlani" Type="Self.UzmanlikAlani" Multiplicity="1" />
+    <End Role="RotasyonBilgi" Type="Self.RotasyonBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UzmanlikAlani">
+        <PropertyRef Name="UzmanlikAlanId" />
+      </Principal>
+      <Dependent Role="RotasyonBilgi">
+        <PropertyRef Name="UzmanlikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AsistanTakipEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AnabilimDali" EntityType="Self.AnabilimDali" />
+    <EntitySet Name="Asistan" EntityType="Self.Asistan" />
+    <EntitySet Name="Baskan" EntityType="Self.Baskan" />
+    <EntitySet Name="Ek2_Raporu" EntityType="Self.Ek2_Raporu" />
+    <EntitySet Name="Ek3_Raporu" EntityType="Self.Ek3_Raporu" />
+    <EntitySet Name="Juriler" EntityType="Self.Juriler" />
+    <EntitySet Name="Kanaat_Rapor" EntityType="Self.Kanaat_Rapor" />
+    <EntitySet Name="KayitTuru" EntityType="Self.KayitTuru" />
+    <EntitySet Name="Kullanici" EntityType="Self.Kullanici" />
+    <EntitySet Name="LiteraturBilgisi" EntityType="Self.LiteraturBilgisi" />
+    <EntitySet Name="LogFile" EntityType="Self.LogFile" />
+    <EntitySet Name="MezunSonrasiDersBilgileri" EntityType="Self.MezunSonrasiDersBilgileri" />
+    <EntitySet Name="OgretimUyesi" EntityType="Self.OgretimUyesi" />
+    <EntitySet Name="RaporKarne" EntityType="Self.RaporKarne" />
+    <EntitySet Name="Rotasyon" EntityType="Self.Rotasyon" />
+    <EntitySet Name="RotasyonBilgi" EntityType="Self.RotasyonBilgi" />
+    <EntitySet Name="SeminerBilgisi" EntityType="Self.SeminerBilgisi" />
+    <EntitySet Name="SinavBilgisi" EntityType="Self.SinavBilgisi" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UzmanlikAlani" EntityType="Self.UzmanlikAlani" />
+    <EntitySet Name="View_AsistanRotasyon" EntityType="Self.View_AsistanRotasyon" />
+    <EntitySet Name="View_KanaatForm" EntityType="Self.View_KanaatForm" />
+    <EntitySet Name="View_Lit" EntityType="Self.View_Lit" />
+    <EntitySet Name="View_Mezun" EntityType="Self.View_Mezun" />
+    <EntitySet Name="View_Personel_TotalAsistan" EntityType="Self.View_Personel_TotalAsistan" />
+    <EntitySet Name="View_RaporKarne" EntityType="Self.View_RaporKarne" />
+    <EntitySet Name="View_Rotasyon" EntityType="Self.View_Rotasyon" />
+    <EntitySet Name="View_RotasyonBilgi" EntityType="Self.View_RotasyonBilgi" />
+    <EntitySet Name="View_Seminer" EntityType="Self.View_Seminer" />
+    <EntitySet Name="View_Sinav" EntityType="Self.View_Sinav" />
+    <EntitySet Name="View_TezGelismeRaporu" EntityType="Self.View_TezGelismeRaporu" />
+    <EntitySet Name="View_TezSinavBasvuruForm" EntityType="Self.View_TezSinavBasvuruForm" />
+    <AssociationSet Name="FK_Asistan_AnabilimDali" Association="Self.FK_Asistan_AnabilimDali">
+      <End Role="AnabilimDali" EntitySet="AnabilimDali" />
+      <End Role="Asistan" EntitySet="Asistan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Juriler_AnabilimDali" Association="Self.FK_Juriler_AnabilimDali">
+      <End Role="AnabilimDali" EntitySet="AnabilimDali" />
+      <End Role="Juriler" EntitySet="Juriler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_AnabilimDali" Association="Self.FK_Kullanici_AnabilimDali">
+      <End Role="AnabilimDali" EntitySet="AnabilimDali" />
+      <End Role="Kullanici" EntitySet="Kullanici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotasyonBilgi_AnabilimDali" Association="Self.FK_RotasyonBilgi_AnabilimDali">
+      <End Role="AnabilimDali" EntitySet="AnabilimDali" />
+      <End Role="RotasyonBilgi" EntitySet="RotasyonBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asistan_KayitTuru" Association="Self.FK_Asistan_KayitTuru">
+      <End Role="KayitTuru" EntitySet="KayitTuru" />
+      <End Role="Asistan" EntitySet="Asistan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asistan_OgretimUyesi" Association="Self.FK_Asistan_OgretimUyesi">
+      <End Role="OgretimUyesi" EntitySet="OgretimUyesi" />
+      <End Role="Asistan" EntitySet="Asistan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek2_Raporu_Asistan" Association="Self.FK_Ek2_Raporu_Asistan">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="Ek2_Raporu" EntitySet="Ek2_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Asistan1" Association="Self.FK_Ek3_Raporu_Asistan1">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kanaat_Rapor_Asistan" Association="Self.FK_Kanaat_Rapor_Asistan">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="Kanaat_Rapor" EntitySet="Kanaat_Rapor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiteraturBilgisi_Id" Association="Self.FK_LiteraturBilgisi_Id">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MezunSonrasiDersBilgileri_Id" Association="Self.FK_MezunSonrasiDersBilgileri_Id">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_Asistan1" Association="Self.FK_RaporKarne_Asistan1">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rotasyon_Asistan" Association="Self.FK_Rotasyon_Asistan">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="Rotasyon" EntitySet="Rotasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeminerBilgisi_AsistanId" Association="Self.FK_SeminerBilgisi_AsistanId">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SinavBilgisi_AsistanId" Association="Self.FK_SinavBilgisi_AsistanId">
+      <End Role="Asistan" EntitySet="Asistan" />
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Baskan" Association="Self.FK_Ek3_Raporu_Baskan">
+      <End Role="Baskan" EntitySet="Baskan" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Juriler" Association="Self.FK_Ek3_Raporu_Juriler">
+      <End Role="Juriler" EntitySet="Juriler" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Juriler2" Association="Self.FK_Ek3_Raporu_Juriler2">
+      <End Role="Juriler" EntitySet="Juriler" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Juriler3" Association="Self.FK_Ek3_Raporu_Juriler3">
+      <End Role="Juriler" EntitySet="Juriler" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Juriler4" Association="Self.FK_Ek3_Raporu_Juriler4">
+      <End Role="Juriler" EntitySet="Juriler" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ek3_Raporu_Juriler5" Association="Self.FK_Ek3_Raporu_Juriler5">
+      <End Role="Juriler" EntitySet="Juriler" />
+      <End Role="Ek3_Raporu" EntitySet="Ek3_Raporu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiteraturBilgisi_OgretimUyesi" Association="Self.FK_LiteraturBilgisi_OgretimUyesi">
+      <End Role="OgretimUyesi" EntitySet="OgretimUyesi" />
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi" Association="Self.FK_RaporKarne_LiteraturBilgisi">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi1" Association="Self.FK_RaporKarne_LiteraturBilgisi1">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi10" Association="Self.FK_RaporKarne_LiteraturBilgisi10">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi11" Association="Self.FK_RaporKarne_LiteraturBilgisi11">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi2" Association="Self.FK_RaporKarne_LiteraturBilgisi2">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi3" Association="Self.FK_RaporKarne_LiteraturBilgisi3">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi4" Association="Self.FK_RaporKarne_LiteraturBilgisi4">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi5" Association="Self.FK_RaporKarne_LiteraturBilgisi5">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi6" Association="Self.FK_RaporKarne_LiteraturBilgisi6">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi7" Association="Self.FK_RaporKarne_LiteraturBilgisi7">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi8" Association="Self.FK_RaporKarne_LiteraturBilgisi8">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_LiteraturBilgisi9" Association="Self.FK_RaporKarne_LiteraturBilgisi9">
+      <End Role="LiteraturBilgisi" EntitySet="LiteraturBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MezunSonrasiDersBilgileri_OgretimUyesi" Association="Self.FK_MezunSonrasiDersBilgileri_OgretimUyesi">
+      <End Role="OgretimUyesi" EntitySet="OgretimUyesi" />
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri1" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri1">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri10" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri10">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri11" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri11">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri12" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri12">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri13" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri13">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri14" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri14">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri15" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri15">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri16" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri16">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri17" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri17">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri18" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri18">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri19" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri19">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri2" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri2">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri20" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri20">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri21" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri21">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri22" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri22">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri23" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri23">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri3" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri3">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri4" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri4">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri5" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri5">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri6" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri6">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri7" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri7">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri8" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri8">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_MezunSonrasiDersBilgileri9" Association="Self.FK_RaporKarne_MezunSonrasiDersBilgileri9">
+      <End Role="MezunSonrasiDersBilgileri" EntitySet="MezunSonrasiDersBilgileri" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeminerBilgisi_OgretimUyesi" Association="Self.FK_SeminerBilgisi_OgretimUyesi">
+      <End Role="OgretimUyesi" EntitySet="OgretimUyesi" />
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SinavBilgisi_OgretimUyesi" Association="Self.FK_SinavBilgisi_OgretimUyesi">
+      <End Role="OgretimUyesi" EntitySet="OgretimUyesi" />
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_Rotasyon1" Association="Self.FK_RaporKarne_Rotasyon1">
+      <End Role="Rotasyon" EntitySet="Rotasyon" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi" Association="Self.FK_RaporKarne_SeminerBilgisi">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi1" Association="Self.FK_RaporKarne_SeminerBilgisi1">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi10" Association="Self.FK_RaporKarne_SeminerBilgisi10">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi11" Association="Self.FK_RaporKarne_SeminerBilgisi11">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi2" Association="Self.FK_RaporKarne_SeminerBilgisi2">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi3" Association="Self.FK_RaporKarne_SeminerBilgisi3">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi4" Association="Self.FK_RaporKarne_SeminerBilgisi4">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi5" Association="Self.FK_RaporKarne_SeminerBilgisi5">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi6" Association="Self.FK_RaporKarne_SeminerBilgisi6">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi7" Association="Self.FK_RaporKarne_SeminerBilgisi7">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi8" Association="Self.FK_RaporKarne_SeminerBilgisi8">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SeminerBilgisi9" Association="Self.FK_RaporKarne_SeminerBilgisi9">
+      <End Role="SeminerBilgisi" EntitySet="SeminerBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi" Association="Self.FK_RaporKarne_SinavBilgisi">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi1" Association="Self.FK_RaporKarne_SinavBilgisi1">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi10" Association="Self.FK_RaporKarne_SinavBilgisi10">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi11" Association="Self.FK_RaporKarne_SinavBilgisi11">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi2" Association="Self.FK_RaporKarne_SinavBilgisi2">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi3" Association="Self.FK_RaporKarne_SinavBilgisi3">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi4" Association="Self.FK_RaporKarne_SinavBilgisi4">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi5" Association="Self.FK_RaporKarne_SinavBilgisi5">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi6" Association="Self.FK_RaporKarne_SinavBilgisi6">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi7" Association="Self.FK_RaporKarne_SinavBilgisi7">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi8" Association="Self.FK_RaporKarne_SinavBilgisi8">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RaporKarne_SinavBilgisi9" Association="Self.FK_RaporKarne_SinavBilgisi9">
+      <End Role="SinavBilgisi" EntitySet="SinavBilgisi" />
+      <End Role="RaporKarne" EntitySet="RaporKarne" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rotasyon_RotasyonBilgi" Association="Self.FK_Rotasyon_RotasyonBilgi">
+      <End Role="RotasyonBilgi" EntitySet="RotasyonBilgi" />
+      <End Role="Rotasyon" EntitySet="Rotasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotasyonBilgi_UzmanlikAlani" Association="Self.FK_RotasyonBilgi_UzmanlikAlani">
+      <End Role="UzmanlikAlani" EntitySet="UzmanlikAlani" />
+      <End Role="RotasyonBilgi" EntitySet="RotasyonBilgi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
